@@ -1,6 +1,6 @@
 {
-  "name": "yes",
-  "description": "yes",
+  "name": "romaspirin-tic-tac-toe",
+  "description": "tic-tac-toe game",
   "version": "1.0.0",
   "author": "yes",
   "license": "no",
@@ -8,11 +8,13 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
-    "heroku-postbuild": "echo Skip build on Heroku"
+    "heroku-postbuild": "echo Skip build on Heroku",
+    "start": "node server.js"
   },
   "dependencies": {
     "bootstrap": "^4.4.1",
     "bootstrap-vue": "^2.11.0",
+    "express": "^4.17.1",
     "vue": "^2.6.11",
     "vue-simple-alert": "^1.1.1"
   },
