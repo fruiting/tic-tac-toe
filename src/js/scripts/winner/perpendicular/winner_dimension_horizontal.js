@@ -12,9 +12,6 @@ class WinnerDimensionHorizontal extends WinnerDimensionPerpendicular {
      */
     constructor(board) {
         super(board);
-
-        this._coordinate = 75;
-        this._step = 150;
     }
 
     /**

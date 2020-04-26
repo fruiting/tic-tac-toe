@@ -11,12 +11,7 @@ class WinnerDimensionPerpendicular extends WinnerDimensionBase {
      */
     constructor(board) {
         super(board);
-
-        /** @var {Number} coordinate Start value of coordinate */
-        this._coordinate = 0;
-
-        /** @var {Number} step Step of coordinates in cells */
-        this._step = 0;
+        this._coordinate = document.querySelector('.js-tic-tac-toe-cell').offsetWidth;
     }
 
     /**
@@ -27,9 +22,7 @@ class WinnerDimensionPerpendicular extends WinnerDimensionBase {
      * @returns {VoidFunction}
      */
     calculateCoordinate(perpendicularNumber) {
-        for (let i = 0; i < perpendicularNumber; i++) {
-            this._coordinate += this._step;
-        }
+        this._coordinate = (this._coordinate / 2) * (perpendicularNumber + (perpendicularNumber + 1));
     }
 }
 
