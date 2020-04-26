@@ -54,6 +54,25 @@ input[type=number] {
     -moz-appearance: textfield;
 }
 
+.capitalize-first-letter::first-letter {
+    text-transform: capitalize;
+}
+
+.select {
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #008CBA;
+    color: #ffffff;
+}
+
+.select option {
+    margin: 40px;
+    background: #fff;
+    color: #000;
+}
+
 canvas {
     width: 100%;
     height: 100%;

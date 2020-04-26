@@ -2,7 +2,14 @@
     <div class="container">
         <div class="container--col">
             <div class="flex-center">
-                <button class="btn btn--blue btn--margin-right" @click="close">Change count</button>
+                <div class="select">
+                    <label for="select">Field size</label>
+                    <select id="select" @change="drawTable" v-model="cells">
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
                 <button class="btn btn--yellow btn--margin-left" @click="reset">Reset</button>
             </div>
             <div class="board">
@@ -37,6 +44,9 @@
 
         data() {
             return {
+                /** @var {Number} cells Board size */
+                cells: 3,
+
                 /** @var {Array|String} board Describes tic-tac-toe board rows and cols */
                 board: [],
 
@@ -69,24 +79,15 @@
              */
             drawTable() {
                 this.board = [];
-                for (let i = 0; i < this.$attrs.value; i++) {
+                for (let i = 0; i < this.cells; i++) {
                     let row = [];
-                    for (let j = 0; j < this.$attrs.value; j++) {
+                    for (let j = 0; j < this.cells; j++) {
                         row.push('');
                     }
                     this.board.push(row);
                 }
 
                 this.activeFigure = new Cross();
-            },
-
-            /**
-             * Closes board
-             *
-             * @returns {VoidFunction}
-             */
-            close() {
-                this.$parent.active = false;
             },
 
             /**

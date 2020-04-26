@@ -5,10 +5,9 @@
                 Game over
             </template>
             <div class="d-block text-center">
-                <h3>{{ winnerFigure }} won</h3>
+                <h3 class="capitalize-first-letter">{{ winnerFigure }} won</h3>
             </div>
             <b-button class="mt-3" variant="info" block @click="reset">Reset game</b-button>
-            <b-button class="mt-3" variant="warning" block @click="goToTheMenu">Menu</b-button>
         </b-modal>
     </div>
 </template>
@@ -59,16 +58,6 @@
                 this.closePopup();
                 this.$parent.reset();
             },
-
-            /**
-             * Close the game and goes to the main menu
-             *
-             * @returns {VoidFunction}
-             */
-            goToTheMenu() {
-                this.closePopup();
-                this.$parent.close();
-            }
         }
     }
 </script>
