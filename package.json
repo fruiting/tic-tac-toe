@@ -14,7 +14,7 @@
   "dependencies": {
     "bootstrap": "^4.4.1",
     "bootstrap-vue": "^2.11.0",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "vue": "^2.6.11",
     "vue-simple-alert": "^1.1.1"
   },
